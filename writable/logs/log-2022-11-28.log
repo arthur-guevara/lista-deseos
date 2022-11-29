@@ -1,0 +1,298 @@
+CRITICAL - 2022-11-28 18:19:38 --> Call to undefined method App\Models\UsersModel::obtenerUsuario
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Login.php(21): CodeIgniter\Model->__call('obtenerUsuario', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 18:20:38 --> Call to undefined method App\Models\UsersModel::obtenerUsuario
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Login.php(21): CodeIgniter\Model->__call('obtenerUsuario', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 18:21:21 --> Object of class App\Models\UsersModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `users`
+WHERE `user` = :user:
+AND `password` = :password:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `users`
+WHERE `user` = :user:
+AND `password` = :password:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user` = :user:
+AND `password` = :password:', [...], false)
+ 6 APPPATH\Models\UsersModel.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Login.php(21): App\Models\UsersModel->getUsers([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 18:22:56 --> Object of class App\Models\UsersModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `users`
+WHERE `usuario` = :usuario:
+AND `password` = :password:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `users`
+WHERE `usuario` = :usuario:
+AND `password` = :password:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usuario` = :usuario:
+AND `password` = :password:', [...], false)
+ 6 APPPATH\Models\UsersModel.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Login.php(21): App\Models\UsersModel->getUsers([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 18:26:59 --> Error connecting to the database: mysqli_sql_exception: Incorrect database name 'wishlist ' in C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'wishlist ', 3306, '', 0)
+#1 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Victor\Documents\lista-deseos\app\Models\UsersModel.php(15): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Victor\Documents\lista-deseos\app\Controllers\Login.php(21): App\Models\UsersModel->getUsers(Array)
+#6 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Login->login()
+#7 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Victor\Documents\lista-deseos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\Victor...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Incorrect database name 'wishlist ' in C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Victor\Documents\lista-deseos\app\Models\UsersModel.php(15): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Victor\Documents\lista-deseos\app\Controllers\Login.php(21): App\Models\UsersModel->getUsers(Array)
+#5 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Login->login()
+#6 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Victor\Documents\lista-deseos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\Victor...')
+#10 {main}
+CRITICAL - 2022-11-28 18:26:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Incorrect database name 'wishlist '
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `usuario` = :usuario:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\UsersModel.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Login.php(21): App\Models\UsersModel->getUsers([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 18:27:14 --> Undefined index: pass
+in APPPATH\Controllers\Login.php on line 27.
+ 1 APPPATH\Controllers\Login.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pass', 'APPPATH\\Controllers\\Login.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 18:27:47 --> Undefined index: id_rol
+in APPPATH\Controllers\Login.php on line 31.
+ 1 APPPATH\Controllers\Login.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_rol', 'APPPATH\\Controllers\\Login.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 18:38:32 --> Undefined variable: nombre
+in APPPATH\Views\templates\sidebar.php on line 34.
+ 1 APPPATH\Views\templates\sidebar.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nombre', 'APPPATH\\Views\\templates\\sidebar.php', 34, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('templates/sidebar', null, true)
+ 5 APPPATH\Views\templates\miListaTemplate.php(9): CodeIgniter\View\View->include('templates/sidebar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\miListaTemplate.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('templates/miListaTemplate', [], true)
+ 9 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Users/miListaView', [], true)
+10 APPPATH\Controllers\Users.php(16): view('Users/miListaView')
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->lista()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 18:55:42 --> mysqli_sql_exception: Not unique table/alias: 'users' in C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`....', 0)
+#1 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\Users\Victor\Documents\lista-deseos\app\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Victor\Documents\lista-deseos\app\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+#6 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Users->index()
+#7 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Victor\Documents\lista-deseos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\Victor...')
+#11 {main}
+CRITICAL - 2022-11-28 18:55:42 --> Not unique table/alias: 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`', [], false)
+ 5 APPPATH\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 18:56:37 --> mysqli_sql_exception: Not unique table/alias: 'users' in C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`....', 0)
+#1 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\Users\Victor\Documents\lista-deseos\app\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Victor\Documents\lista-deseos\app\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+#6 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Users->index()
+#7 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Victor\Documents\lista-deseos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\Victor...')
+#11 {main}
+CRITICAL - 2022-11-28 18:56:37 --> Not unique table/alias: 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`', [], false)
+ 5 APPPATH\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 18:56:41 --> mysqli_sql_exception: Not unique table/alias: 'users' in C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`....', 0)
+#1 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\Users\Victor\Documents\lista-deseos\app\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Victor\Documents\lista-deseos\app\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+#6 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Users->index()
+#7 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Victor\Documents\lista-deseos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\Victor...')
+#11 {main}
+CRITICAL - 2022-11-28 18:56:41 --> Not unique table/alias: 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `users` ON `users`.`id_user` = `wish`.`id_usuario`', [], false)
+ 5 APPPATH\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 18:57:26 --> mysqli_sql_exception: Unknown column 'wish.whish' in 'field list' in C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`....', 0)
+#1 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\Users\Victor\Documents\lista-deseos\app\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Victor\Documents\lista-deseos\app\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+#6 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Users->index()
+#7 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Victor\Documents\lista-deseos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Victor\Documents\lista-deseos\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\Victor...')
+#11 {main}
+CRITICAL - 2022-11-28 18:57:26 --> Unknown column 'wish.whish' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `wish` ON `users`.`id_user` = `wish`.`id_usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `wish` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `wish` ON `users`.`id_user` = `wish`.`id_usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`usuario`, `users`.`avatar`, `wish`.`whish`
+FROM `users`
+JOIN `wish` ON `users`.`id_user` = `wish`.`id_usuario`', [], false)
+ 5 APPPATH\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Users.php(19): App\Models\UsersModel->getUsersData()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 19:03:50 --> whereNotIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(815): CodeIgniter\Database\BaseBuilder->_whereIn('users.id_user', '1', true, 'AND ', null)
+ 2 APPPATH\Models\UsersModel.php(22): CodeIgniter\Database\BaseBuilder->whereNotIn('users.id_user', '1')
+ 3 APPPATH\Controllers\Users.php(19): App\Models\UsersModel->getUsersData('1')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 19:12:13 --> syntax error, unexpected ')'
+in APPPATH\Views\Users\dashboardView.php on line 5.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Users/dashboardView', [], true)
+ 3 APPPATH\Controllers\Users.php(19): view('Users/dashboardView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Users->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
