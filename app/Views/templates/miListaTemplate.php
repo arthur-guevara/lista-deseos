@@ -40,9 +40,16 @@
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="<?= base_url('template/assets/js/bootstrap.js') ?>  "></script>
     <script src="<?= base_url('template/assets/js/app.js') ?>  "></script>
-
+    <script src="<?= base_url('template/assets/js/funciones.js') ?>  "></script>
+    <script>
+        let url = "<?=base_url('user/setWish')?>";
+        let id = <?=$id?>;
+    </script>
 </body>
 
 </html>

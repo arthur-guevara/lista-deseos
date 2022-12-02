@@ -18,11 +18,11 @@
             <div class="row">
                 <div class="col-12-md">
                     <div class="form-group mb-3 text-center">
-                        <label for="exampleFormControlTextarea1" class="form-label ">Para navidad quiero ... </label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1"><?= $myData ?></textarea>
+                        <label for="wishlist" class="form-label ">Para navidad quiero ... </label>
+                        <textarea class="form-control" id="wishlist"><?= $myData ?></textarea>
                     </div>
                 </div>
-                <button class="btn btn-success text-center">Enviar</button>
+                <button class="btn btn-success text-center" id="btn-enviar-wish">Enviar</button>
 
             </div>
         </div>

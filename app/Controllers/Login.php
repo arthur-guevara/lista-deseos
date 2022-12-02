@@ -28,8 +28,14 @@ class Login extends BaseController
             return redirect()->to(base_url('/'))->with('msg', 'Contraseña incorrecta');
         }
 
-        if($response[0]['change_password'] == 0){
-            return view('Login/cambiaPasswordView', ['nombre' => $response[0]['usuario'] ]);
+        if ($response[0]['change_password'] == 0) {
+            return view(
+                'Login/cambiaPasswordView',
+                [
+                    'nombre' => $response[0]['usuario'],
+                    'id' => $response[0]['id_user']
+                ]
+            );
         }
 
         $info = array(
@@ -51,7 +57,21 @@ class Login extends BaseController
             ->with('msg', 'Sesion cerrada correctamente');
     }
 
-    public function changePassword(){
-        return view('Login/cambiaPasswordView',['nombre' => session('usuario')]);
+    public function changePassword()
+    {
+        return view('Login/cambiaPasswordView', ['nombre' => session('usuario')]);
+    }
+
+    public function updatePass()
+    {
+        $password = $this->request->getPost('password');
+        $id = $this->request->getPost('id');
+        $user = new UsersModel();
+
+          if ($user->updatePassword($id, $password) == 0) {
+            return redirect()->to(base_url('updatePass'))->with('msg', 'Error al actualizar la contraseña');
+        }
+
+        return redirect()->to(base_url('salir'))->with('status', '1'); 
     }
 }

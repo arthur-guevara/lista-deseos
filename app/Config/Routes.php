@@ -42,6 +42,9 @@ $routes->get('mi-lista', 'Users::lista');
 $routes->post('login', 'Login::login');
 $routes->get('salir', 'Login::logout');
 $routes->get('cambia', 'Login::changePassword');
+$routes->post('updatePass', 'Login::updatePass');
+$routes->post('user/setWish', 'Users::setWish');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -10,7 +10,7 @@ class Users extends BaseController
     public function index()
     {
         $dataUsers = new UsersModel();
-        
+
         return view(
             'Users/dashboardView',
             [
@@ -25,14 +25,31 @@ class Users extends BaseController
     {
         $data = new UsersModel();
         $myData = $data->getMyData(['id_usuario' => session('id')]);
-        
+
         return view(
             'Users/miListaView',
             [
-                'nombre' => session('name'), 
+                'nombre' => session('name'),
                 'id' => session('id'),
-                'myData' => $myData[0]['wish']
+                'myData' => count($myData) == 0 ? '' : $myData[0]['wish']
             ]
         );
+    }
+
+    public function setWish()
+    {
+        $users = new UsersModel();
+        $data = [
+            'wish' => $this->request->getPost('wish'),
+            'id' => $this->request->getPost('id')
+        ];
+ 
+        $controllerName = $users->checkWish($data);
+        $response = $users->$controllerName($data);
+
+        echo json_encode([
+            'status' => $response,
+            'msg' =>  $response == 1 ? 'Información actualizada' : 'Sin información a actualizar'
+        ]);
     }
 }
