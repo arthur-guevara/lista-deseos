@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="row mb-3">
                 <div class="col-12-md">
-                    <img src="<?= base_url("template/assets/images/faces/2.jpg") ?>" class="img-fluid rounded mx-auto d-block profile" alt="usuario" id="userImg" style="max-width: 150px;">
+                    <img src="<?= base_url($avatar) ?>" class="img-fluid rounded mx-auto d-block profile" alt="usuario" id="userImg" style="max-width: 150px;">
                     <input type="file" name="imgInp" id="imgInp" hidden accept="image/*">
                 </div>
             </div>

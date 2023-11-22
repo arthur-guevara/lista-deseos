@@ -10,7 +10,10 @@ class Users extends BaseController
     public function index()
     {
         $dataUsers = new UsersModel();
-
+        $wishes = $dataUsers->getUsersData(session('id'));
+        foreach($wishes as $wish){
+            
+        }
         return view(
             'Users/dashboardView',
             [
@@ -31,6 +34,7 @@ class Users extends BaseController
             [
                 'nombre' => session('name'),
                 'id' => session('id'),
+                'avatar' => session('avatar'),
                 'myData' => count($myData) == 0 ? '' : $myData[0]['wish']
             ]
         );

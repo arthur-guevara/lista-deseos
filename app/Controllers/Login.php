@@ -40,7 +40,8 @@ class Login extends BaseController
 
         $info = array(
             'id' => $response[0]['id_user'],
-            'name' => $response[0]['usuario']
+            'name' => $response[0]['usuario'],
+            'avatar' => $response[0]['avatar']
         );
 
         $session = session();

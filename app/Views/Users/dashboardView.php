@@ -21,7 +21,12 @@
                     <div class="col-12-md">
                         <div class="form-group mb-3 text-center">
                             <label class="form-label ">Para navidad quiero ... </label>
-                            <p><?= $dt['wish']?> </p>
+                            <ul>
+                                <?php $opciones = explode('*', $dt['wish']);
+                                foreach ($opciones as $opcion) :    ?>
+                                    <li><?= $opcion ?></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
